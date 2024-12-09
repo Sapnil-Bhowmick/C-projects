@@ -1,0 +1,174 @@
+
+body {
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+}
+
+.todo-wrapper {
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    margin: 50px 0px 0px 0px;
+    padding: 30px 20px; 
+}
+
+.todo-wrapper > h1 {
+    text-align: center;
+    color: rgb(73, 73, 131)
+}
+
+.todo-wrapper .task-div {
+    position: relative;
+}
+
+.todo-wrapper .task-div > input {
+    outline: none;
+    border: none;
+    background-color: #f0efef;
+    border-radius: 30px;
+    color: tomato;
+    padding: 15px;
+    width:100%;
+    box-sizing: border-box;
+    border: 1px solid #e7e7e7;
+}
+
+.todo-wrapper .task-div > input::placeholder {
+    color:  #cccbcb;
+}
+
+
+.todo-wrapper .task-div > button {
+    border: none;
+    padding: 0px;
+
+    background-color: tomato;
+    border-radius: 30px;
+    width: 120px;
+    padding: 16px 20px;
+    color: #fff;
+
+    position: absolute;
+    right: 0px;
+
+
+    transition: background-color 0.25s ease-in;
+}
+
+.todo-wrapper .task-div > button:hover{
+    background-color: rgb(243, 60, 27);
+    cursor: pointer;
+}
+
+
+
+.task-container {
+    margin: 50px 0px 0px 0px;
+    padding: 10px;
+}
+
+.task-container .task {
+    margin: 20px 0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-container .task .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.left > h3 {
+    margin: 0px 0px 0px 20px;
+}
+
+
+.left > h3:hover {
+    cursor: pointer;
+}
+
+.left .strike-through-btn {
+    border: 1px solid #e7e7e7;
+    background-color: transparent;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-container .task > .delete {
+    border: none;
+    background-color: transparent;
+    color:black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-container .task > .delete:hover {
+    background-color: #e7e7e7;
+    cursor: pointer;
+}
+
+
+.left .strikeThroughBtn-bgcolor {
+    background-color: tomato;
+}
+
+.left .crossOff {
+    text-decoration: line-through;
+}
+
+
+
+
+
+
+.left > .editDiv > input {
+    margin: 0px 0px 0px 20px;
+}
+
+
+
+.editDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editInput {
+    outline: none;
+    border: none;
+    background-color: #e7e7e7;
+    padding: 5px;
+    color: tomato;
+    border-radius: 5px;
+}
+
+.saveBtn {
+    margin: 0px 0px 0px 10px;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.saveBtn:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
