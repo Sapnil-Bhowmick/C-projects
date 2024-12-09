@@ -1,0 +1,146 @@
+
+body {
+    height: 100vh;
+    background-color: #8a94b3;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 536px;
+}
+
+.wrapper .calculator {
+    width: 100%;
+}
+
+.wrapper .calculator > .display-area {
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+    box-shadow: 0px 4px 4px rgba(255,255,255,0.2);
+}
+
+.wrapper .calculator > .display-area > input[type="text"] {
+    width: 100%;
+    height: 143px;
+    background-color: #181f32;
+    color: #fff;
+    border-radius: 12px;
+
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 73px;
+
+    text-align: right;
+    padding: 0px 20px;
+    box-sizing: border-box;
+
+    outline: none;
+    border: none
+}
+
+.wrapper .calculator > .key-area {
+    width: 100%;
+    background-color: #252d44;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+
+
+.wrapper .calculator > .key-area > .number-operator{
+    border: none;
+    background-color: #EAE3DB;
+    width:100px;
+    height: 60px;
+    border-radius: 12px;
+    padding: 0px;
+    color: #3B4664;
+    
+    font-family: "Inter", serif;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 36.31px;
+
+}
+
+.wrapper .calculator > .key-area > .btn-bottom-div {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.wrapper .calculator > .key-area > .btn-bottom-div > button {
+    flex: 1;
+    padding:0px;
+}
+
+
+.wrapper .calculator .key-area  .apply {
+    border: none;
+    border-radius: 11.52px;
+    color: #fff;
+    height: 60px;
+    background-color: #647299;
+
+    font-family: "Inter", serif;
+    font-weight: 800;
+    font-size: 23.05px;
+    line-height: 27px;
+}
+
+.wrapper .calculator .btn-bottom-div > .equal {
+    background-color: #D13F30;
+    margin: 0px 0px 0px 25px;
+}
+
+.wrapper .calculator > .key-area  button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.wrapper .calculator > .key-area  button:active {
+    opacity: 0.5;;
+}
+
+
+.wrapper .calculator .display-area > input[type="text"].error {
+    color: red
+}
+
+
+
+
+
+/* ------------------------- RESPONSIVE Styles ------------------------- */
+
+
+@media only screen and (max-width: 535px){
+    .wrapper .calculator > .key-area {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .wrapper .calculator > .key-area > .number-operator {
+        width: 80px;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .wrapper .calculator > .key-area {
+        gap: 20px;
+    }
+}

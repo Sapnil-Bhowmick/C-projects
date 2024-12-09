@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./calculator.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,800;1,14..32,800&display=swap"
+        rel="stylesheet">
+    <title>Calculator App</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="calculator">
+            <div class="display-area">
+                <input type="text" readonly id="display-area" />
+            </div>
+            <div class="key-area">
+                <button class="number-operator" onclick="handleClick('7')">7</button>
+                <button class="number-operator" onclick="handleClick('8')">8</button>
+                <button class="number-operator" onclick="handleClick('9')">9</button>
+                <button class="number-operator apply" onclick="handleDelete()">DEL</button>
+                <button class="number-operator" onclick="handleClick('4')">4</button>
+                <button class="number-operator" onclick="handleClick('5')">5</button>
+                <button class="number-operator" onclick="handleClick('6')">6</button>
+                <button class="number-operator" onclick="handleClickOperator('+')">+</button>
+                <button class="number-operator" onclick="handleClick('1')">1</button>
+                <button class="number-operator" onclick="handleClick('2')">2</button>
+                <button class="number-operator" onclick="handleClickOperator('3')">3</button>
+                <button class="number-operator" onclick="handleClickOperator('-')">-</button>
+                <button class="number-operator" onclick="handleClick('.')">.</button>
+                <button class="number-operator" onclick="handleClick('0')">0</button>
+                <button class="number-operator" onclick="handleClickOperator('/')">/</button>
+                <button class="number-operator" onclick="handleClickOperator('*')">x</button>
+                <div class="btn-bottom-div">
+                    <button class="apply" onclick="handleReset()">Reset</button>
+                    <button class="apply equal" onclick="handleEvaluate()">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./calculator.js"></script>
+</body>
+
+</html>
