@@ -1,0 +1,168 @@
+
+:root {
+    --bg-color: rgb(255, 255, 255);
+
+    --card-desc-color: rgb(167, 163, 163);
+    --card-title-color: rgb(71, 71, 117);
+    --comment-bg-color: rgb(45, 129, 226);
+    --card-border-radius: 12px;
+
+    --box-shadow: 0px 2px 10px rgb(235, 235, 235);
+}
+
+
+body {
+    height: 100vh;
+    background-color: var(--bg-color);
+
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.main-div {
+    width: 30%;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--bg-color);
+    border-radius: var(--card-border-radius);
+    padding: 10px 20px 50px 20px;
+    box-shadow: var(--box-shadow);
+
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card .img-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+
+    position: relative;
+    z-index: 2
+}
+
+.card .img-main {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0px 0px 20px 0px;
+
+    position: relative;
+}
+
+.card .img-main::before {
+    content: "✔";
+    background-color: var(--comment-bg-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: var(--bg-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    z-index: 3
+
+}
+
+.card .img-main::after {
+    content: "";
+    background-color: var(--comment-bg-color);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;
+    left: 7px;
+
+    z-index: 1;
+}
+
+
+.card .img-container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h4 {
+    margin: 0px
+}
+
+.title {
+    color: var(--card-title-color);
+}
+
+.occupation , .title {
+    text-transform: capitalize;
+}
+
+.occupation {
+    color: var(--comment-bg-color);
+    margin: 10px 0px 0px 0px;
+}
+
+.card > p {
+    color: var(--card-desc-color);
+    text-align: center;
+}
+
+
+.main-div > .btn-container {
+    width: 90px;
+
+    position: absolute;
+    bottom: 5%;
+    left: calc(50% - 45px);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-div > .btn-container > button {
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    color: var(--comment-bg-color);
+    font-weight: 800;
+    font-size: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-div > .btn-container > button:active {
+    opacity: 0.7;
+}
+
+.main-div > .btn-container > button:hover {
+    cursor: pointer;
+}
+
+.Inactive-card {
+    position: absolute;
+    top: 0px;
+
+    display: none
+}
