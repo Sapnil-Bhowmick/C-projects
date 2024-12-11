@@ -1,0 +1,93 @@
+
+:root {
+    --shadow: 0px 2px 10px rgb(223, 220, 220);
+    --bg-color: rgb(255, 255, 255);
+    --title-color: rgb(56, 56, 148);
+    --desc-color: black;
+    --line-color: rgb(196, 195, 195);
+}
+
+
+.section-container {
+    width: 100%;
+    max-width: 700px;
+    /* border: 1px solid red */
+}
+
+body {
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.FAQ-Section {
+    margin: 30px 0px 0px 0px;
+}
+
+h1 {
+    color: var(--title-color);
+    text-align: center;
+}
+
+span {
+    color: var(--title-color);
+    font-size: 20px;
+}
+
+p {
+    color: var(--desc-color);
+}
+
+.FAQ-card {
+    box-shadow: var(--shadow);
+    padding: 20px;
+    margin: 0px 0px 20px 0px;
+}
+
+.FAQ-question {
+    background-color: var(--bg-color);
+    padding: 15px 0px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.FAQ-answer {
+    border-top: 2px solid var(--line-color);
+}
+
+button:hover {
+    background-color: bisque;
+    cursor: pointer;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.FAQ-card .FAQ-answer {
+    display: none;
+}
+
+.btn-container > button {
+    display: none
+}
+
+
+
+/* --------------------------------- */
+
+.card-container .FAQ-card > .active-FAQ {
+    display: block;
+}
+
+.card-container .FAQ-card .btn-active {
+    display: inline-block;
+}
