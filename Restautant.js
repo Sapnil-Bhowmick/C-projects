@@ -85,17 +85,50 @@ const menu = [
 
 const MenuCardContainer = document.querySelector(".menu-section > .menuContainer")
 const btnContainer = document.querySelector(".menu-section > .btn-container")
-// console.log(btnContainer)
+const search = document.querySelector(".search")
+
+console.log(search)
 
 document.addEventListener("DOMContentLoaded", () => {
 
     displayMenuCards(menu)
+
+    // After all the menu data is fetched and rendered in dom then only attach event listener to input
+    searchMenu()
+
     displayButtons()
 
     console.log("DOM loaded")
 })
 
 
+
+
+function searchMenu() {
+    search.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+
+            const searchValue = e.target.value.toLowerCase().trim()
+
+            // If anything is typed then filter else return all menu items
+            if (searchValue) {
+                const searchedMenu = menu.filter((menuItem) => {
+                    if (menuItem.title.toLowerCase().includes(searchValue)) {
+                        return menuItem
+                    }
+                })
+
+                console.log('searched value', searchValue)
+                displayMenuCards(searchedMenu)
+            }
+            else{
+                displayMenuCards(menu)
+                console.log("You didnt search anything")
+            }
+
+        }
+    })
+}
 
 
 function displayButtons() {
@@ -134,25 +167,25 @@ function displayButtons() {
 }
 
 
-function filterCategory(){
+function filterCategory() {
 
     const filterBtnList = btnContainer.childNodes
 
     filterBtnList.forEach((item) => {
-        item.addEventListener("click" , (e) => {
+        item.addEventListener("click", (e) => {
 
             const category = e.currentTarget.dataset.id
 
             const filteredMenuArr = menu.filter((menuItem) => {
-                if(menuItem.category === category){
+                if (menuItem.category === category) {
                     return menuItem
                 }
             })
 
-            if(category !== "all"){
+            if (category !== "all") {
                 displayMenuCards(filteredMenuArr)
             }
-            else{
+            else {
                 displayMenuCards(menu)
             }
             console.log(filteredMenuArr)
@@ -179,7 +212,7 @@ function displayMenuCards(menuArr) {
                     <div class="content-container">
                         <div class="titleDiv">
                             <h3 class="title">${item.title}</h3>
-                            <span class="price">${item.price}</span>
+                            <span class="price">$${item.price}</span>
                         </div>
 
                         <div>
