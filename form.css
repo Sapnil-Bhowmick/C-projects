@@ -96,10 +96,10 @@ button:hover {
 
 /* ----------------  */
 
-.error {
-    color: var(--error-color);
+.signUP > form > .form-field-div > input.error {
+    border-color: var(--error-color);
 }
 
-.success {
-    color: var(--success-color);
+.signUP > form > .form-field-div > input.success {
+    border-color: var(--success-color);
 }
